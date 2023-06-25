@@ -16,7 +16,7 @@ public class TimeRestrictionMiddleware
     public async Task Invoke(HttpContext context)
     {
         var currentTime = DateTime.Now.TimeOfDay;
-        var startTime = new TimeSpan(2, 0, 0);
+        var startTime = new TimeSpan(12, 0, 0);
         var endTime = new TimeSpan(18, 0, 0);
 
         if (currentTime >= startTime && currentTime <= endTime)
